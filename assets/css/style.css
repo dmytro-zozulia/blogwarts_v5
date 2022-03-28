@@ -163,7 +163,7 @@ nav {
   padding: 0.5em;
   width: 50%;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   height: 100%;
   border-left: 3px solid var(--main-black);
 }
@@ -201,9 +201,8 @@ nav {
   position: absolute;
   left: 0;
   height: 100vh;
-  top: 11.5vh;
+  top: 11vh;
   background-color: var(--main-blue);
-
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -296,7 +295,7 @@ nav {
 
 .charity-info {
   position: absolute;
-  bottom: -2em;
+  bottom: 2em;
   width: 80%;
   margin: auto;
   display: flex;
@@ -867,13 +866,6 @@ footer {
   .home__img {
     max-width: 100%;
   }
-
-  .charity-info {
-    bottom: -2em;
-
-    width: 100%;
-  }
-
   .menu-btn {
     display: none;
   }
