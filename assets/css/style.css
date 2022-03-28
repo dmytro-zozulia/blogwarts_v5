@@ -117,8 +117,10 @@ img {
 
 @font-face {
   font-family: MagicSchoolOne;
-  src: url(../fonts/MagicSchoolOne.woff2) format("woff2"), url(../fonts/MagicSchoolOne.woff) format("woff"), url(../fonts/MagicSchoolOne.ttf) format("ttf");
-  font-display:swap;
+  src: url(../fonts/MagicSchoolOne.woff2) format("woff2"),
+    url(../fonts/MagicSchoolOne.woff) format("woff"),
+    url(../fonts/MagicSchoolOne.ttf) format("ttf");
+  font-display: swap;
 }
 
 h1 {
@@ -566,6 +568,41 @@ nav {
   margin: 3em auto;
 }
 
+.pricing__item-price-back {
+  position: absolute;
+  bottom: -1.5em;
+  right: 1em;
+  transform: translateX(50%);
+  background-color: var(--main-blue);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+
+.pricing__item-price {
+  font-size: 2rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--main-white);
+}
+.pricing__item-crossed-price {
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: -0.8em;
+  right: -1.6em;
+}
+.pricing__item-crossed-price::after {
+  content: "";
+  width: 3px;
+  height: 60px;
+  background-color: #201f1e;
+  position: absolute;
+  transform: rotate(80deg);
+  top: -0.9em;
+  left: 1.2em;
+}
 /* PRICING END */
 
 /* FEEDBACK START */
@@ -870,6 +907,9 @@ footer {
   .menu-btn {
     display: none;
   }
+  .charity-info {
+    bottom: -1.5em;
+  }
   .nav {
     flex-direction: row;
     border-bottom: 2px solid var(--main-black);
@@ -1078,6 +1118,42 @@ footer {
     display: flex;
   }
 
+  .pricing__item-price-back {
+    position: absolute;
+    bottom: -1em;
+    right: -1em;
+    transform: translateX(50%);
+    background-color: var(--main-blue);
+    border-radius: 50%;
+    width: 115px;
+    height: 115px;
+  }
+
+  .pricing__item-price {
+    font-size: 3rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--main-white);
+  }
+  .pricing__item-crossed-price {
+    font-size: 2rem;
+    position: absolute;
+    bottom: 1.5em;
+    right: -3em;
+  }
+  .pricing__item-crossed-price::after {
+    content: "";
+    width: 3px;
+    height: 100px;
+    background-color: #201f1e;
+    position: absolute;
+    transform: rotate(80deg);
+    top: -0.9em;
+    left: 1.2em;
+  }
+
   /* FEEDBACK*/
 
   .emoji-ball {
@@ -1214,5 +1290,8 @@ footer {
     font-size: 14rem;
     position: relative;
     left: -10rem;
+  }
+  .charity-info {
+    bottom: -1em;
   }
 }
