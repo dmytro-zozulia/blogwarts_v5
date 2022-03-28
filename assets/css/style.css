@@ -117,7 +117,7 @@ img {
 
 @font-face {
   font-family: MagicSchoolOne;
-  src: url(../fonts/MagicSchoolOne.ttf) format("opentype");
+  src: url(../fonts/MagicSchoolOne.woff2) format("woff2");
 }
 
 h1 {
