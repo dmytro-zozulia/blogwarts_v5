@@ -139,8 +139,9 @@ navSlide();
 
 //COUNTDOWN TIMER
 
+
 function updateTimer() {
-  let future = Date.parse("Apr 11, 2022 00:00:00");
+  let future = Date.parse("Apr 12, 2022 00:00:00");
   let now = new Date();
   let diff = future - now;
 
@@ -154,10 +155,18 @@ function updateTimer() {
   let m = mins - hours * 60;
   let s = sec - mins * 60;
 
-  document.querySelector(".countdown__days-number").innerText = d;
-  document.querySelector(".countdown__hours-number").innerText = h;
-  document.querySelector(".countdown__minutes-number").innerText = m;
-  document.querySelector(".countdown__seconds-number").innerText = s;
+  if (diff < 0) {
+    clearInterval(interval);
+    document.querySelector(".countdown__days-number").innerText = "0";
+    document.querySelector(".countdown__hours-number").innerText = "0";
+    document.querySelector(".countdown__minutes-number").innerText = "0";
+    document.querySelector(".countdown__seconds-number").innerText = "0";
+  } else {
+    document.querySelector(".countdown__days-number").innerText = d;
+    document.querySelector(".countdown__hours-number").innerText = h;
+    document.querySelector(".countdown__minutes-number").innerText = m;
+    document.querySelector(".countdown__seconds-number").innerText = s;
+  }
 }
 
 setInterval(updateTimer, 1000);
