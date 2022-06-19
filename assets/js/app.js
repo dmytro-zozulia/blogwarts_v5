@@ -179,53 +179,53 @@ setInterval(updateTimer, 1000);
 
 //Animation that runs once
 
+//ANIMATIONS
+
+//Nav and button
+const slideTogether = () => {
+  headerMain.classList.remove("header-all-hidden");
+  btnMain.classList.remove("home__btn-hidden");
+};
+
+// all the content slides to the left
+const snapInPlace = () => {
+  titleMain.classList.remove("home__intro");
+  imgMain.classList.remove("skewed-and-hidden");
+  textMain.forEach((piece) => {
+    piece.classList.remove("skewed-and-hidden");
+  });
+  topTitleMain.classList.remove("skewed-and-hidden");
+  setTimeout(slideTogether, 1000);
+};
+//big title
+const titleFadeIn = () => {
+  titleMain.classList.remove("home__title-hidden");
+};
+
 window.addEventListener("DOMContentLoaded", () => {
-  //get the 'animationSeen' cookie and store in a variable
+  // //get the 'animationSeen' cookie and store in a variable
   const seenAnimation = Cookies.get("animationSeen");
 
-  //ANIMATIONS
-
-  //Nav and button
-  const slideTogether = () => {
+  //if the 'animationSeen" is undefined
+  if (seenAnimation) {
     headerMain.classList.remove("header-all-hidden");
     btnMain.classList.remove("home__btn-hidden");
-  };
-
-  // all the content slides to the left
-  const snapInPlace = () => {
     titleMain.classList.remove("home__intro");
+    titleMain.classList.remove("home__title-hidden");
     imgMain.classList.remove("skewed-and-hidden");
     textMain.forEach((piece) => {
       piece.classList.remove("skewed-and-hidden");
     });
     topTitleMain.classList.remove("skewed-and-hidden");
-    setTimeout(slideTogether, 1000);
-  };
-  //big title
-  const titleFadeIn = () => {
-    titleMain.classList.remove("home__title-hidden");
-  };
 
-  //if the 'animationSeen" is undefined
-  if (!seenAnimation) {
     //display the loading-wrapper
 
-    window.addEventListener("load", () => {
-      titleFadeIn();
-      setTimeout(snapInPlace, 2000);
-    });
     // set the animationSeen cookie to expire in 5days
-    Cookies.set("animationSeen", 1, { expires: 5 });
+    //
   } else {
-    headerMain.classList.remove("header-all-hidden");
-    btnMain.classList.remove("home__btn-hidden");
-    titleMain.classList.remove("home__intro");
-    titleMain.classList.remove("home__title-hidden");
-    imgMain.classList.remove("skewed-and-hidden");
-    textMain.forEach((piece) => {
-      piece.classList.remove("skewed-and-hidden");
-    });
-    topTitleMain.classList.remove("skewed-and-hidden");
+    titleFadeIn();
+    setTimeout(snapInPlace, 2000);
+    Cookies.set("animationSeen", 1, { expires: 5 });
   }
 });
 
