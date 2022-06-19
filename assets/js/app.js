@@ -177,29 +177,34 @@ function updateTimer() {
 
 setInterval(updateTimer, 1000);
 
-//ANIMATIONS
-
-const slideTogether = () => {
-  headerMain.classList.remove("header-all-hidden");
-  btnMain.classList.remove("home__btn-hidden");
-};
-
-const snapInPlace = () => {
-  titleMain.classList.remove("home__intro");
-  imgMain.classList.remove("skewed-and-hidden");
-  textMain.forEach((piece) => {
-    piece.classList.remove("skewed-and-hidden");
-  });
-  topTitleMain.classList.remove("skewed-and-hidden");
-  setTimeout(slideTogether, 1000);
-};
-const titleFadeIn = () => {
-  titleMain.classList.remove("home__title-hidden");
-};
+//Animation that runs once
 
 window.addEventListener("DOMContentLoaded", () => {
   //get the 'animationSeen' cookie and store in a variable
   const seenAnimation = Cookies.get("animationSeen");
+
+  //ANIMATIONS
+
+  //Nav and button
+  const slideTogether = () => {
+    headerMain.classList.remove("header-all-hidden");
+    btnMain.classList.remove("home__btn-hidden");
+  };
+
+  // all the content slides to the left
+  const snapInPlace = () => {
+    titleMain.classList.remove("home__intro");
+    imgMain.classList.remove("skewed-and-hidden");
+    textMain.forEach((piece) => {
+      piece.classList.remove("skewed-and-hidden");
+    });
+    topTitleMain.classList.remove("skewed-and-hidden");
+    setTimeout(slideTogether, 1000);
+  };
+  //big title
+  const titleFadeIn = () => {
+    titleMain.classList.remove("home__title-hidden");
+  };
 
   //if the 'animationSeen" is undefined
   if (!seenAnimation) {
