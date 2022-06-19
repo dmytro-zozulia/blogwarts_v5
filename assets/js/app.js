@@ -1,3 +1,5 @@
+//Menu
+const allSections = document.querySelectorAll("section");
 const menuLinks = document.querySelectorAll(".nav__list-item");
 const menuBtn = document.querySelector(".menu-btn");
 const sideMenu = document.querySelector(".nav__list");
@@ -9,6 +11,10 @@ const textMain = document.querySelectorAll(".home__text ");
 const topTitleMain = document.querySelector(".home__top-title");
 const headerMain = document.querySelector(".header-all");
 const btnMain = document.querySelector(".home__btn");
+const charityInfo = document.querySelector(".charity-info");
+const homeStars = document.querySelector(".emoji-stars-home");
+const homeLetter = document.querySelector(".emoji-letter ");
+const homeOwl = document.querySelector(".emoji-owl ");
 
 const headerHeight = header.offsetHeight;
 
@@ -57,8 +63,6 @@ window.addEventListener("load", function () {
         settings: {
           slidesToScroll: 1,
           slidesToShow: 1,
-          dots: true,
-          arrows: false,
           scrollLock: true,
           itemWidth: 100,
         },
@@ -69,8 +73,7 @@ window.addEventListener("load", function () {
         settings: {
           slidesToScroll: 1,
           slidesToShow: 1,
-          dots: true,
-          arrows: false,
+
           scrollLock: true,
           itemWidth: 100,
         },
@@ -80,8 +83,7 @@ window.addEventListener("load", function () {
         settings: {
           slidesToScroll: 1,
           slidesToShow: 1,
-          dots: true,
-          arrows: false,
+
           scrollLock: true,
           itemWidth: 50,
         },
@@ -91,8 +93,7 @@ window.addEventListener("load", function () {
         settings: {
           slidesToScroll: 1,
           slidesToShow: 1,
-          dots: true,
-          arrows: false,
+
           scrollLock: true,
           itemWidth: 25,
         },
@@ -122,6 +123,14 @@ const navSlide = () => {
     linksAppear();
     menuBtn.classList.toggle("toggle");
   });
+
+  allSections.forEach((section) => {
+    section.addEventListener("click", () => {
+      sideMenu.classList.toggle("menu-active");
+      linksAppear();
+      menuBtn.classList.toggle("toggle");
+    });
+  });
 };
 
 // let mainAll = document.querySelector("main");
@@ -147,7 +156,7 @@ navSlide();
 //COUNTDOWN TIMER
 
 function updateTimer() {
-  let future = Date.parse("Apr 12, 2022 00:00:00");
+  let future = Date.parse("Jul 04, 2022 00:00:00");
   let now = new Date();
   let diff = future - now;
 
@@ -163,10 +172,10 @@ function updateTimer() {
 
   if (diff < 0) {
     clearInterval(diff);
-    document.querySelector(".countdown__days-number").innerText = "0";
-    document.querySelector(".countdown__hours-number").innerText = "0";
-    document.querySelector(".countdown__minutes-number").innerText = "0";
-    document.querySelector(".countdown__seconds-number").innerText = "0";
+    document.querySelector(".countdown__days-number").innerText = "00";
+    document.querySelector(".countdown__hours-number").innerText = "00";
+    document.querySelector(".countdown__minutes-number").innerText = "00";
+    document.querySelector(".countdown__seconds-number").innerText = "00";
   } else {
     document.querySelector(".countdown__days-number").innerText = d;
     document.querySelector(".countdown__hours-number").innerText = h;
@@ -187,6 +196,14 @@ const slideTogether = () => {
   btnMain.classList.remove("home__btn-hidden");
 };
 
+//emoji
+const emojiAppear = () => {
+  charityInfo.classList.remove("appear-last");
+  homeStars.classList.remove("appear-last");
+  homeOwl.classList.remove("appear-last");
+  homeLetter.classList.remove("appear-last");
+};
+
 // all the content slides to the left
 const snapInPlace = () => {
   titleMain.classList.remove("home__intro");
@@ -196,14 +213,23 @@ const snapInPlace = () => {
   });
   topTitleMain.classList.remove("skewed-and-hidden");
   setTimeout(slideTogether, 1000);
+  setTimeout(emojiAppear, 2000);
 };
 //big title
 const titleFadeIn = () => {
   titleMain.classList.remove("home__title-hidden");
 };
 
-window.addEventListener("DOMContentLoaded", () => {
-  // //get the 'animationSeen' cookie and store in a variable
+if (document.readyState !== "loading") {
+  introAnimationLogic();
+} else {
+  document.addEventListener("DOMContentLoaded", function () {
+    introAnimationLogic();
+  });
+}
+
+function introAnimationLogic() {
+  //get the 'animationSeen' cookie and store in a variable
   const seenAnimation = Cookies.get("animationSeen");
 
   //if the 'animationSeen" is undefined
@@ -217,6 +243,7 @@ window.addEventListener("DOMContentLoaded", () => {
       piece.classList.remove("skewed-and-hidden");
     });
     topTitleMain.classList.remove("skewed-and-hidden");
+    setTimeout(emojiAppear, 1000);
 
     //display the loading-wrapper
 
@@ -227,8 +254,4 @@ window.addEventListener("DOMContentLoaded", () => {
     setTimeout(snapInPlace, 2000);
     Cookies.set("animationSeen", 1, { expires: 5 });
   }
-});
-
-// window.addEventListener("load", () => {
-//   homeSection.classList.add("home__loaded");
-// });
+}
