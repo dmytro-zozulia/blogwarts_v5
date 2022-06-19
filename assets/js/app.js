@@ -197,15 +197,10 @@ const titleFadeIn = () => {
   titleMain.classList.remove("home__title-hidden");
 };
 
-//get a reference to the animation-wrapper
-
-const animWrapper = document.querySelector(".animation-wrapper");
-const loadWrapper = document.querySelector(".animate-once");
-
-//get the 'animationSeen' cookie and store in a variable
-const seenAnimation = Cookies.get("animationSeen");
-
 window.addEventListener("DOMContentLoaded", () => {
+  //get the 'animationSeen' cookie and store in a variable
+  const seenAnimation = Cookies.get("animationSeen");
+
   //if the 'animationSeen" is undefined
   if (!seenAnimation) {
     //display the loading-wrapper
