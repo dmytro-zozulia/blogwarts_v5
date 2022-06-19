@@ -29,6 +29,7 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
+
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.3rem;
@@ -90,6 +91,7 @@ img {
   text-align: center;
   font-weight: 600;
   font-size: 1.4rem;
+  transition: all 0.6s ease-out;
 }
 
 .bolder-same-size {
@@ -247,21 +249,29 @@ nav {
   padding: 7rem 0;
   position: relative;
 }
+
 .home__title {
   font-family: MagicSchoolOne;
   font-size: 6.5rem;
   font-weight: normal;
   line-height: 100%;
   margin: 0.02em 0 0.2em 0;
+  transition: all 1.25s ease;
 }
 
 .home__text + .home__text {
   margin-top: 1em;
 }
 
+.home__text,
+.home__top-title {
+  transition: all 1.25s ease;
+}
+
 .home__img {
   max-width: 75%;
   vertical-align: top;
+  transition: all 1.25s ease;
 }
 
 .emoji-stars-home {
@@ -864,11 +874,6 @@ footer {
     padding: 1em;
   }
 
-  /* NEW CLASS FOR DESKTOP */
-  .program-container {
-    /* margin: 0 auto; */
-    /* max-width: 80%; */
-  }
   .author__name {
     font-size: 3rem;
   }

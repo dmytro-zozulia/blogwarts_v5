@@ -34,14 +34,16 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/carousel.css" />
     <link rel="stylesheet" href="./assets/css/glider.min.css" />
     <link rel="stylesheet" href="./assets/css/glider.css" />
+    <link rel="stylesheet" href="./assets/css/animations.css" />
 
     <script src="assets/js/glider.min.js"></script>
     <script src="assets/js/glider.js"></script>
-
+    <script src="assets/js/js.cookie.min.js"></script>
     <script src="./assets/js/app.js" async defer></script>
   </head>
   <body>
@@ -55,7 +57,7 @@
       ></iframe
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <header class="header-all">
+    <header class="header-all header-all-hidden">
       <div class="nav row">
         <div class="nav__left">
           <div id="nav__logo">
@@ -89,25 +91,25 @@
 
     <!-- HOME SECTION -->
 
-    <section class="home">
+    <section class="home animate-once">
       <div class="container flex-desktop-col">
-        <p class="home__top-title">Школа магії та СММу</p>
-        <h1 class="home__title">Blogwarts</h1>
+        <p class="home__top-title skewed-and-hidden">Школа магії та СММу</p>
+        <h1 class="home__title home__intro home__title-hidden">Blogwarts</h1>
         <img
           src="assets/img/emoji/stars.png"
           alt=""
           class="emoji-stars-home emoji-big"
         />
-        <p class="home__text">
+        <p class="home__text skewed-and-hidden">
           Обширне та інтенсивне навчання мистецтву SMM, який дає результати тут
           і зараз
         </p>
-        <p class="home__text">
+        <p class="home__text skewed-and-hidden">
           Нічого зайвого і все те, що поділить вашу кар’єру на “до” і “після”
         </p>
         <a
           href="https://blogwarts.teachable.com/purchase?product_id=3903090"
-          class="purchase-btn home__btn"
+          class="purchase-btn home__btn home__btn-hidden"
           >Купити курс</a
         >
         <div class="charity-info">
@@ -148,7 +150,7 @@
           />
 
           <img
-            class="home__img"
+            class="home__img skewed-and-hidden"
             src="assets/img/photos/home_mob_alt.jpg"
             alt=""
           />

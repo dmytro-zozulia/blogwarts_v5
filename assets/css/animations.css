@@ -1,0 +1,56 @@
+/* .container,
+.flex-container-desktop {
+  width: 100%;
+  max-width: 100%;
+} */
+
+.home__title-hidden {
+  opacity: 0;
+}
+
+.skewed-and-hidden {
+  opacity: 0;
+  transform: translateX(-40%);
+}
+
+.header-all-hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.home__btn-hidden {
+  opacity: 0;
+  transform: translateY(40%);
+}
+
+.charity-info {
+  opacity: 0;
+}
+.charity-text {
+  opacity: 0;
+}
+
+.emoji-stars-home {
+  opacity: 0;
+}
+
+.emoji-letter {
+  opacity: 0;
+}
+.emoji-owl {
+  opacity: 0;
+}
+
+/* .home__visual {
+  opacity: 0;
+} */
+
+.emoji-ukraine {
+  opacity: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .home__intro {
+    transform: translateX(-40%);
+  }
+}
