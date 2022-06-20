@@ -1145,7 +1145,7 @@ footer {
     bottom: -1em;
     right: -1em;
     transform: translateX(50%);
-    background-color: var(--main-blue);
+    background-color: var(--main-black);
     border-radius: 50%;
     width: 115px;
     height: 115px;
