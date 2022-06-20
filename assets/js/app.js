@@ -126,9 +126,11 @@ const navSlide = () => {
 
   allSections.forEach((section) => {
     section.addEventListener("click", () => {
-      sideMenu.classList.toggle("menu-active");
-      linksAppear();
-      menuBtn.classList.toggle("toggle");
+      if (sideMenu.classList.contains("menu-active")) {
+        sideMenu.classList.toggle("menu-active");
+        linksAppear();
+        menuBtn.classList.toggle("toggle");
+      }
     });
   });
 };

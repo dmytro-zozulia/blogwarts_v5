@@ -43,8 +43,8 @@ body {
 :root {
   --main-blue: #0021f3;
   --real-black: #000;
-  --main-black: #201f1e;
-  --main-white: #fdfbf5;
+  --main-black: #fdfbf5;
+  --main-white: #0021f3;
 }
 
 img {
@@ -92,6 +92,11 @@ img {
   font-weight: 600;
   font-size: 1.4rem;
   transition: all 0.6s ease-out;
+}
+
+.purchase-btn-alternate {
+  background-color: var(--main-blue);
+  color: var(--main-black);
 }
 
 .bolder-same-size {
@@ -229,7 +234,7 @@ nav {
 }
 .nav__list-item a {
   text-decoration: none;
-  color: var(--main-white);
+  color: var(--main-black);
   font-size: 1rem;
   font-weight: 700;
 }
@@ -351,19 +356,19 @@ nav {
 }
 
 .for__item-border-1 {
-  background-image: url("../img/vectors/alt_for__item-border-1.png");
+  background-image: url("../img/vectors/white-circle-stylized.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 .for__item-border-2 {
-  background-image: url("../img/vectors/alt_for__item-border-1.png");
+  background-image: url("../img/vectors/white-circle-stylized.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 .for__item-border-3 {
-  background-image: url("../img/vectors/alt_for__item-border-1.png");
+  background-image: url("../img/vectors/white-circle-stylized.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -443,7 +448,7 @@ nav {
 .program__item-title {
   font-size: 1.8rem;
   font-weight: 700;
-  color: var(--main-blue);
+  color: var(--main-black);
 }
 .program__item {
   position: relative;
@@ -593,7 +598,7 @@ nav {
   bottom: -1.5em;
   right: 1em;
   transform: translateX(50%);
-  background-color: var(--main-blue);
+  background-color: var(--main-black);
   border-radius: 50%;
   width: 80px;
   height: 80px;
@@ -672,7 +677,7 @@ nav {
 
 /* COUNTDOWN START */
 .countdown {
-  background-color: var(--main-blue);
+  background-color: var(--main-black);
   color: var(--main-white);
   padding: 2rem 0;
 }
@@ -800,7 +805,7 @@ nav {
 .contact__insta-link {
   text-decoration: none;
   font-weight: 600;
-  color: var(--main-blue);
+  color: var(--main-black);
   cursor: pointer;
 }
 
