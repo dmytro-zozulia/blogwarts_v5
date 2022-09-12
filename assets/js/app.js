@@ -158,7 +158,7 @@ navSlide();
 //COUNTDOWN TIMER
 
 function updateTimer() {
-  let future = Date.parse("Sep 25, 2022 00:00:00");
+  let future = Date.parse("Oct 3, 2022 00:00:00");
   let now = new Date();
   let diff = future - now;
 
