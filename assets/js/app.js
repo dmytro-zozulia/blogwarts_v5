@@ -6,9 +6,9 @@ const sideMenu = document.querySelector(".nav__list");
 const header = document.querySelector(".header-all");
 //IntroAnimation
 const titleMain = document.querySelector(".home__title");
-const imgMain = document.querySelector(".home__img ");
+const imgMain = document.querySelector(".home__decor-owl");
 const textMain = document.querySelectorAll(".home__text ");
-const topTitleMain = document.querySelector(".home__top-title");
+const topTitleMain = document.querySelector(".home__sub-title");
 const headerMain = document.querySelector(".header-all");
 const btnMain = document.querySelector(".home__btn");
 const charityInfo = document.querySelector(".charity-info");
@@ -83,7 +83,6 @@ window.addEventListener("load", function () {
         settings: {
           slidesToScroll: 1,
           slidesToShow: 1,
-
           scrollLock: true,
           itemWidth: 50,
         },
@@ -158,7 +157,7 @@ navSlide();
 //COUNTDOWN TIMER
 
 function updateTimer() {
-  let future = Date.parse("Oct 3, 2022 00:00:00");
+  let future = Date.parse("Jan 23, 2023 09:00:00");
   let now = new Date();
   let diff = future - now;
 
@@ -201,9 +200,9 @@ const slideTogether = () => {
 //emoji
 const emojiAppear = () => {
   charityInfo.classList.remove("appear-last");
-  homeStars.classList.remove("appear-last");
-  homeOwl.classList.remove("appear-last");
-  homeLetter.classList.remove("appear-last");
+  // homeStars.classList.remove("appear-last");
+  // homeOwl.classList.remove("appear-last");
+  // homeLetter.classList.remove("appear-last");
 };
 
 // all the content slides to the left
