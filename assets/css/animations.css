@@ -52,6 +52,6 @@
 
 @media screen and (min-width: 1024px) {
   .home__intro {
-    transform: translateX(-40%);
+    transform: translateX(40%);
   }
 }

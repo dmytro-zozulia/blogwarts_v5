@@ -9,6 +9,7 @@ const titleMain = document.querySelector(".home__title");
 const imgMain = document.querySelector(".home__decor-owl");
 const textMain = document.querySelectorAll(".home__text ");
 const topTitleMain = document.querySelector(".home__sub-title");
+const sectionTitle = document.querySelector(".section-title");
 const headerMain = document.querySelector(".header-all");
 const btnMain = document.querySelector(".home__btn");
 const charityInfo = document.querySelector(".charity-info");
@@ -239,6 +240,7 @@ function introAnimationLogic() {
     btnMain.classList.remove("home__btn-hidden");
     titleMain.classList.remove("home__intro");
     titleMain.classList.remove("home__title-hidden");
+
     imgMain.classList.remove("skewed-and-hidden");
     textMain.forEach((piece) => {
       piece.classList.remove("skewed-and-hidden");
