@@ -34,7 +34,7 @@ window.addEventListener("load", function () {
     slidesToShow: 1,
     dots: "#dots",
     draggable: true,
-    itemWidth: 100,
+    itemWidth: 1000,
     slidesToScroll: 1,
     arrows: {
       prev: ".glider-prev",
@@ -45,9 +45,11 @@ window.addEventListener("load", function () {
         breakpoint: 1400,
         settings: {
           slidesToScroll: 1,
-          itemWidth: 500,
-          slidesToShow: 3.5,
+          itemWidth: 600,
+          slidesToShow: 2.5,
           exactWidth: true,
+          dots: false,
+          arrows: false,
         },
       },
       {
@@ -55,8 +57,9 @@ window.addEventListener("load", function () {
         settings: {
           slidesToScroll: 1,
           itemWidth: 400,
-          slidesToShow: 2.5,
+          slidesToShow: 3.5,
           exactWidth: true,
+          dots: false,
         },
       },
       {
@@ -76,7 +79,7 @@ window.addEventListener("load", function () {
           slidesToShow: 1,
 
           scrollLock: true,
-          itemWidth: 100,
+          itemWidth: 400,
         },
       },
       {
@@ -85,7 +88,7 @@ window.addEventListener("load", function () {
           slidesToScroll: 1,
           slidesToShow: 1,
           scrollLock: true,
-          itemWidth: 50,
+          itemWidth: 100,
         },
       },
       {
