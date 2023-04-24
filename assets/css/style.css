@@ -83,11 +83,9 @@ img {
 .section-title {
   /* font-family: MagicSchoolOne;
   font-size: 4.5rem; */
-  font-size: 2rem;
-
+  font-size: 1.5rem;
   font-weight: 700;
   text-transform: uppercase;
-  font-weight: normal;
   line-height: 125%;
   text-align: center;
   transition: all 0.6s ease-out;
@@ -725,6 +723,8 @@ div#nav__logo {
 .pricing__item:first-of-type .home__sub-title {
   background-color: #544f4f;
   padding: 0.25rem 0.75rem;
+  text-align: center;
+  font-size: 1em;
 }
 
 .emoji-eyeglasses {
@@ -1074,7 +1074,7 @@ footer {
   }
 
   .section-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
   }
 
@@ -1198,6 +1198,11 @@ footer {
 
 @media screen and (min-width: 1024px) {
   /* Global type classes */
+
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
 
   .home {
     display: flex;
@@ -1737,6 +1742,7 @@ footer {
   .faq {
     width: 100%;
     margin-left: 2em;
+    margin-top: 4em;
   }
   .faq__flex-container {
     display: flex;
