@@ -36,10 +36,6 @@ window.addEventListener("load", function () {
     draggable: true,
     itemWidth: 1000,
     slidesToScroll: 1,
-    arrows: {
-      prev: ".glider-prev",
-      next: ".glider-next",
-    },
     responsive: [
       {
         breakpoint: 1400,
@@ -60,6 +56,7 @@ window.addEventListener("load", function () {
           slidesToShow: 3.5,
           exactWidth: true,
           dots: false,
+          arrows: false,
         },
       },
       {
@@ -69,6 +66,7 @@ window.addEventListener("load", function () {
           slidesToShow: 1,
           scrollLock: true,
           itemWidth: 100,
+          arrows: false,
         },
       },
 
@@ -77,7 +75,7 @@ window.addEventListener("load", function () {
         settings: {
           slidesToScroll: 1,
           slidesToShow: 1,
-
+          arrows: false,
           scrollLock: true,
           itemWidth: 400,
         },
@@ -89,6 +87,7 @@ window.addEventListener("load", function () {
           slidesToShow: 1,
           scrollLock: true,
           itemWidth: 100,
+          arrows: false,
         },
       },
       {
@@ -96,7 +95,7 @@ window.addEventListener("load", function () {
         settings: {
           slidesToScroll: 1,
           slidesToShow: 1,
-
+          arrows: false,
           scrollLock: true,
           itemWidth: 25,
         },

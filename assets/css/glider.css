@@ -47,6 +47,7 @@
 }
 .glider-prev,
 .glider-next {
+  display: none;
   user-select: none;
   position: absolute;
   outline: none;

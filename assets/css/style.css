@@ -432,6 +432,7 @@ div#nav__logo {
 
 .for {
   margin: 1em 0;
+  padding: 3em 0;
   /* border-bottom: 2px solid var(--main-black); */
 }
 
@@ -518,6 +519,18 @@ div#nav__logo {
 
 .program__title {
   padding: 0.25em 0 0.3em 0;
+}
+
+.program__item:nth-child(3) .program__head img {
+  right: -1rem;
+  top: -0.75rem;
+  position: relative;
+}
+
+.program__item:nth-child(4) .program__head img {
+  right: -0.3rem;
+  top: -0.75rem;
+  position: relative;
 }
 
 .program__head {
