@@ -1333,7 +1333,7 @@ footer {
     display: flex;
     justify-content: start;
     height: 100%;
-    border-right: 2px solid var(--main-white);
+    /* border-right: 2px solid var(--main-white); */
     border-left: none;
   }
   .nav__list {
